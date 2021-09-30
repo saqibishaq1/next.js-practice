@@ -1,0 +1,16 @@
+
+import classes from './MeetupDetail.module.css'
+function MeetupDetail (props) {
+  return (
+    <section className={classes.Detail}>
+    <img
+      src={props.image}
+      alt={props.title}
+      />
+      <h2>{props.title}</h2>
+      <address>{props.address}</address>
+      <p>{props.description}</p>
+  </section>
+  )
+}
+export default MeetupDetail

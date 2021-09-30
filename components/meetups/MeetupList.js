@@ -1,0 +1,23 @@
+import Layout from '../layout/Layout';
+import MeetupItem from './MeetupItem';
+import classes from './MeetupList.module.css';
+
+function MeetupList(props) {
+  return (
+    <Layout>
+    <ul className={classes.list}>
+      {props.meetups.map((meetup) => (
+        <MeetupItem
+          key={meetup.id}
+          id={meetup.id}
+          image={meetup.image}
+          title={meetup.title}
+          address={meetup.address}
+        />
+      ))}
+    </ul>
+    </Layout>
+  );
+}
+
+export default MeetupList;
